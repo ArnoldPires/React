@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>phone test vr</title>
+  </head>
+  <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+  <body>
+    <a-scene inspector="url:https://aframe.io/releases/0.3.0/aframe-inspector.min.js">
+      <a-assets>
+        <img src="https://ucarecdn.com/3346bf02-3f7e-4c42-9fac-5de7690c392d/" id="grid" crossorigin="anonymous">
+        <img id="sky" src="https://img.gs/bbdkhfbzkk/2048x2048,stretch/http://i.imgur.com/WqlqEkq.jpg" crossorigin="anonymous" />
+        <img id="cat" src="https://ucarecdn.com/395d21a2-a128-41c4-8451-5087bebceff5/" />
+      </a-assets>
+      <a-box src="#cat" depth="30" height="30" width="50" position="70 15 0"></a-box>
+
+      <a-sphere src="https://ucarecdn.com/6c98fdbb-c649-48bc-bc00-592cdf14cee3/" width="500" color="gray" rotation="45 90 300"  position="0 2000 0" radius="900">
+        <a-animation attribute="rotation"
+        dur="10000"
+        fill="forwards"
+        to="0 360 0"
+        repeat="indefinite"></a-animation>
+      </a-sphere>
+      <a-sphere src="https://ucarecdn.com/26fe2b27-fd24-4f63-835c-e9770635c174/" rotation="45 90 300" color="gray" position="10 15 0" radius="10">
+        <a-animation attribute="rotation"
+        dur="10200"
+        fill="forwards"
+        to="0 100 200"
+        repeat="indefinite"></a-animation>
+      </a-sphere>
+      <a-sphere src="https://ucarecdn.com/2ed65d2e-40dd-4928-be61-e889f0e55895/" rotation="45 90 300" color="gray" position="10 15 20" radius="5">
+        <a-animation attribute="rotation"
+        dur="10900"
+        fill="forwards"
+        to="0 60 200"
+        repeat="indefinite"></a-animation>
+      </a-sphere>
+      <a-sphere src="https://ucarecdn.com/7567a443-6ac1-4ccc-a542-949377a7132e/" rotation="45 90 300" color="gray" position="20 60 40" radius="5">
+        <a-animation attribute="rotation"
+        dur="15000"
+        fill="forwards"
+        to="0 36 2000"
+        repeat="indefinite"></a-animation>
+      </a-sphere>
+      <a-sphere src="https://ucarecdn.com/006a2314-2da4-40d0-bd3e-2fbe44bc7152/" rotation="45 90 300" color="gray" position="400 40 40" radius="10">
+        <a-animation attribute="rotation"
+        dur="15000"
+        fill="forwards"
+        to="0 36 2000"
+        repeat="indefinite"></a-animation>
+      </a-sphere>
+      <a-sphere src="https://ucarecdn.com/793f9cf4-290e-422c-bf88-43db839ea35e/" rotation="45 90 300" color="gray" position="40 150 -160" radius="10">
+        <a-animation attribute="rotation"
+        dur="15000"
+        fill="forwards"
+        to="0 36 2000"
+        repeat="indefinite"></a-animation>
+      </a-sphere>
+    </a-sphere>
+    <a-sphere src="https://ucarecdn.com/219cc63c-b425-48ab-9caa-24bebb57621b/" rotation="4 90 300" color="gray" position="10 10 60" radius="10">
+      <a-animation attribute="rotation"
+      dur="15000"
+      fill="forwards"
+      to="0 36 2000"
+      repeat="indefinite"></a-animation>
+    </a-sphere>
+    <a-sphere src="https://ucarecdn.com/94d08f45-b95e-4237-9bd3-056020127406/" rotation="4 90 300" color="gray" position="-400 300 -400" radius="100">
+      <a-animation attribute="rotation"
+      dur="29000"
+      fill="forwards"
+      to="0 36 2000"
+      repeat="indefinite"></a-animation>
+    </a-sphere>
+    <a-sphere src="https://ucarecdn.com/65b9efa4-218c-4d60-acd1-b6bfdfe47949/" rotation="4 90 300" color="gray" position="-900 500 -400" radius="400">
+      <a-animation attribute="rotation"
+      dur="90000"
+      fill="forwards"
+      to="0 36 2000"
+      repeat="indefinite"></a-animation>
+    </a-sphere>
+    <a-sphere src="https://ucarecdn.com/e4623b87-c9c3-4a4e-af7d-98b119bdca8f/" rotation="4 90 300" color="gray" position="-1000 800 500" radius="200">
+      <a-animation attribute="rotation"
+      dur="90000"
+      fill="forwards"
+      to="0 36 2000"
+      repeat="indefinite"></a-animation>
+    </a-sphere>
+    <a-sphere src="https://ucarecdn.com/78368b31-3a3e-49d0-9b1d-35eea30e5813/" rotation="4 90 300" color="gray" position="-1000 800 3000" radius="400">
+      <a-animation attribute="rotation"
+      dur="90000"
+      fill="forwards"
+      to="0 36 2000"
+      repeat="indefinite"></a-animation>
+    </a-sphere>
+
+      <a-entity scale="2 2 2" geometry="primitive: torusKnot;" position="0 6 -10" material="color: magenta; metalness:1; roughness: 0.1; sphericalEnvMap: #sky;">
+        <a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360" repeat="indefinite"></a-animation>
+      </a-entity>
+
+      <a-entity position="0 0 0"
+        geometry="primitive: plane; width: 10000; height: 10000;" rotation="-90 0 0"
+        material="src: #grid; repeat: 500 800; ;metalness:0.6; sphericalEnvMap: #sky;"></a-entity>
+
+      <a-entity light="color: #ccccff; intensity: 1; type: ambient;" visible=""></a-entity>
+      <a-entity light="color: ffaaff; intensity: 1.5" position="5 5 5"></a-entity>
+      <a-entity light="color: white; intensity: 0.5" position="-5 5 15"></a-entity>
+      <a-entity light="color: white; type: ambient;"></a-entity>
+      <a-entity camera universal-controls look-controls wasd-controls="fly:true" position="1 5 0">
+                <a-entity cursor="fuse: true; fuseTimeout: 1500"
+                    position="0 0 -1"
+                    geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                    material="color: #bf00fe; shader: flat">
+                </a-entity>
+                <a-entity camera="" universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate" position="0 1.764 0" rotation="" scale="" visible="" velocity="" hmd-controls="" gamepad-controls="" mouse-controls="">
+        <a-entity cursor="maxDistance: 30" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;" material="color: #CCC; shader: flat;" rotation="" scale="" visible="" raycaster="">
+        </a-entity>
+      </a-entity>
+    </a-entity>
+      <a-entity id="box" cursor-listener geometry="primitive: box" material="color: blue"></a-entity>
+      <a-sky src="#sky" rotation="0 -90 0"></a-sky>
+    </a-scene>
+  </body>
+</html>
